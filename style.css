@@ -5,51 +5,268 @@
     --mks-cyan: #3fb1e3;
 }
 
-body { font-family: 'Segoe UI', sans-serif; background: #010409; margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; overflow: hidden; }
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #010409;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
 
-#chat-container { width: 100%; max-width: 380px; height: 85vh; background: var(--bg-dark); border-radius: 20px; display: flex; flex-direction: column; overflow: hidden; border: 1px solid #30363d; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+#chat-container {
+    width: 100%;
+    max-width: 380px;
+    height: 85vh;
+    background: var(--bg-dark);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #30363d;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
 
-.screen { flex: 1; display: flex; flex-direction: column; height: 100%; overflow: hidden; }
-.hidden { display: none !important; }
+.screen {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+}
+
+.hidden {
+    display: none !important;
+}
 
 /* TELA INICIAL */
-.welcome-card { padding: 25px; text-align: center; display: flex; flex-direction: column; align-items: center; }
-.logo-welcome { width: 120px; margin-bottom: 10px; }
-.welcome-bot { margin: 20px 0; }
+.welcome-card {
+    padding: 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-welcome {
+    width: 120px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px #8957e5;
+    transition:  0.3s ease-in-out;
+    animation: float 3s infinite ease-in-out;
+}
+
+.logo-welcome:hover {
+    box-shadow: 5px 5px 20px #8957e5;
+    transition:  0.3s ease-in-out;
+    scale: calc(1.1);
+    
+}
+
+.welcome-bot {
+    margin: 20px 0;
+}
 
 /* AVATAR ROBÔ */
-.bot-avatar { background: var(--mks-purple); border-radius: 10px; position: relative; border: 2px solid var(--mks-cyan); animation: float 3s infinite ease-in-out; }
-.bot-avatar.big { width: 60px; height: 60px; }
-.bot-avatar.small { width: 35px; height: 35px; margin-right: 12px; }
+.bot-avatar {
+    background: var(--mks-purple);
+    border-radius: 10px;
+    position: relative;
+    border: 2px solid var(--mks-cyan);
+    animation: float 3s infinite ease-in-out;
+}
 
-.bot-eye { width: 4px; height: 4px; background: white; border-radius: 50%; position: absolute; top: 35%; left: 20%; box-shadow: 25px 0 white; }
-.small .bot-eye { width: 3px; height: 3px; top: 35%; left: 20%; box-shadow: 15px 0 white; }
+.bot-avatar.big {
+    width: 60px;
+    height: 60px;
+}
+
+.bot-avatar.small {
+    width: 35px;
+    height: 35px;
+    margin-right: 12px;
+}
+
+.bot-eye {
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 35%;
+    left: 20%;
+    box-shadow: 25px 0 white;
+}
+
+.small .bot-eye {
+    width: 3px;
+    height: 3px;
+    top: 35%;
+    left: 20%;
+    box-shadow: 15px 0 white;
+}
+
+.fade-in {
+    color: white;
+    font-size: 20px;
+    margin: 10px 0;
+    animation: float 3s infinite ease-in-out;
+}
+
+.paragrafo{
+  color: white;
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0 0 24px;
+  animation: float 3s infinite ease-in-out;
+}
 
 /* HEADER AJUSTADO */
-header { background: var(--card-bg); padding: 12px 18px; border-bottom: 1px solid #30363d; display: flex; align-items: center; }
-.header-info { display: flex; flex-direction: column; }
-.name { color: white; font-weight: bold; font-size: 14px; }
-.status-container { display: flex; align-items: center; gap: 5px; margin-top: 2px; }
-.dot-online { width: 7px; height: 7px; background: #238636; border-radius: 50%; box-shadow: 0 0 5px #238636; }
-small { color: #8b949e; font-size: 11px; }
+header {
+    background: var(--card-bg);
+    padding: 12px 18px;
+    border-bottom: 1px solid #30363d;
+    display: flex;
+    align-items: center;
+}
+
+.header-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.status-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 2px;
+}
+
+.dot-online {
+    width: 7px;
+    height: 7px;
+    background: #238636;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #238636;
+}
+
+small {
+    color: #8b949e;
+    font-size: 11px;
+}
 
 /* CHAT WINDOW */
-#chat-window { flex: 1; padding: 15px; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; }
-.msg { max-width: 80%; padding: 10px 14px; border-radius: 15px; font-size: 13.5px; line-height: 1.4; animation: slideUp 0.3s ease; }
-.bot { background: #21262d; color: #e6edf3; align-self: flex-start; border-bottom-left-radius: 2px; }
-.user { background: var(--mks-purple); color: white; align-self: flex-end; border-bottom-right-radius: 2px; }
+#chat-window {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.msg {
+    max-width: 80%;
+    padding: 10px 14px;
+    border-radius: 15px;
+    font-size: 13.5px;
+    line-height: 1.4;
+    animation: slideUp 0.3s ease;
+}
+
+.bot {
+    background: #21262d;
+    color: #e6edf3;
+    align-self: flex-start;
+    border-bottom-left-radius: 2px;
+}
+
+.user {
+    background: var(--mks-purple);
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 2px;
+}
 
 /* INPUT E BOTÕES */
-.interaction-area { background: var(--card-bg); border-top: 1px solid #30363d; }
-.btn-group { padding: 10px; display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
-.btn-opt { background: transparent; border: 1.5px solid var(--mks-cyan); color: var(--mks-cyan); padding: 7px 14px; border-radius: 20px; cursor: pointer; font-size: 12px; font-weight: 600; }
-.input-area { padding: 12px; display: flex; gap: 10px; }
-input { flex: 1; background: #0d1117; border: 1px solid #30363d; color: white; padding: 10px; border-radius: 10px; outline: none; }
-#send-btn { background: var(--mks-purple); border: none; border-radius: 10px; color: white; padding: 0 15px; cursor: pointer; }
+.interaction-area {
+    background: var(--card-bg);
+    border-top: 1px solid #30363d;
+}
 
-.btn-main { width: 240px; padding: 14px; border-radius: 12px; border: none; font-weight: bold; margin-bottom: 10px; cursor: pointer; }
-.primary { background: linear-gradient(135deg, var(--mks-cyan), var(--mks-purple)); color: white; }
-.secondary { background: rgba(255,255,255,0.05); color: white; border: 1px solid #333; }
+.btn-group {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: center;
+}
+
+.btn-opt {
+    background: transparent;
+    border: 1.5px solid var(--mks-cyan);
+    color: var(--mks-cyan);
+    padding: 7px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.input-area {
+    padding: 12px;
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    background: #0d1117;
+    border: 1px solid #30363d;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+}
+
+#send-btn {
+    background: var(--mks-purple);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+.btn-main {
+    width: 240px;
+    padding: 14px;
+    border-radius: 12px;
+    border: none;
+    font-weight: bold;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.primary {
+    background: linear-gradient(135deg, var(--mks-cyan), var(--mks-purple));
+    color: white;
+}
+
+.secondary {
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    border: 1px solid #333;
+}
 
 /* ... (mantenha as variáveis e estilos base anteriores) ... */
 
@@ -59,27 +276,85 @@ input { flex: 1; background: #0d1117; border: 1px solid #30363d; color: white; p
     font-size: 10px;
     color: #666;
     text-align: center;
-    border-top: 1px solid rgba(255,255,255,0.05);
-    margin-top: auto; /* Empurra para o fim da tela inicial */
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    margin-top: auto;
+    /* Empurra para o fim da tela inicial */
 }
 
 /* Garante que o indicador de digitação fique sempre visível no final */
 #typing-indicator {
-    order: 9999; /* Força ele a ser o último elemento no flexbox */
+    order: 9999;
+    /* Força ele a ser o último elemento no flexbox */
     margin-top: 5px;
     background: #21262d;
     width: fit-content;
 }
 
 /* Reajuste do Bot na Tela Inicial para caber o título */
-.welcome-card { padding: 20px 25px; flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-.welcome-bot { margin: 15px 0; }
-h2 { color: white; font-size: 22px; margin: 10px 0; }
+.welcome-card {
+    padding: 20px 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome-bot {
+    margin: 15px 0;
+}
+
+h2 {
+    color: white;
+    font-size: 22px;
+    margin: 10px 0;
+}
 
 /* ... (mantenha as animações e estilos de botão anteriores) ... */
 
 /* ANIMAÇÕES */
-@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
-@keyframes slideUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-.dot-typing { height: 5px; width: 5px; background: #8b949e; border-radius: 50%; display: inline-block; animation: typing 1s infinite; margin: 0 2px; }
-@keyframes typing { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dot-typing {
+    height: 5px;
+    width: 5px;
+    background: #8b949e;
+    border-radius: 50%;
+    display: inline-block;
+    animation: typing 1s infinite;
+    margin: 0 2px;
+}
+
+@keyframes typing {
+
+    0%,
+    100% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
