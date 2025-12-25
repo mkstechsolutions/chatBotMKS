@@ -151,7 +151,7 @@ function enviarParaPlanilha() {
         })
     }).then(() => {
         setTimeout(() => {
-            window.location.href = "http://localhost:3000/index.html"; 
+            window.location.href = "https://www.reddit.com/media?url=https%3A%2F%2Fpreview.redd.it%2Fbig-monke-flips-you-off-what-u-do-v0-861gk9gqka0c1.png%3Fwidth%3D320%26crop%3Dsmart%26auto%3Dwebp%26s%3Db3da7ce53e59215b9e012615aa93c8fc859479e2"; 
         }, 1500);
     });
 }
