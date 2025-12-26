@@ -9,7 +9,7 @@ body {
     font-family: 'Segoe UI', sans-serif;
     background: #010409;
     margin: 0;
-    padding-top: 40px;
+    padding-top: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -367,6 +367,7 @@ h2 {
         opacity: 1;
     }
 }
+
 
 
 
