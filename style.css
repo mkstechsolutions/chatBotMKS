@@ -9,7 +9,10 @@ body {
     font-family: 'Segoe UI', sans-serif;
     background: #010409;
     margin: 0;
-    padding: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     overflow: hidden;
 }
 
@@ -297,12 +300,13 @@ input {
 
 /* Reajuste do Bot na Tela Inicial para caber o título */
 .welcome-card {
-    padding: 20px 25px;
-    flex: 1;
+    width: auto;
+    height: 100%;
+    padding: 25px;
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
 .welcome-bot {
@@ -363,5 +367,3 @@ h2 {
         opacity: 1;
     }
 }
-
-
