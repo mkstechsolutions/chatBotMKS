@@ -196,7 +196,7 @@ function executarAcao(opcao) {
 
     if (txt === "não, tudo certo") {
         botFala("Perfeito! Foi um prazer te ajudar. Visite nosso site sempre que precisar!");
-        setTimeout(() => { window.location.href = "https://www.seusite.com.br"; }, 2500);
+        setTimeout(() => { window.location.href = "https://github.com/MKS-TechSolutions/chatBotMKS/"; }, 3500);
         return;
     }
 
@@ -293,7 +293,7 @@ function handleInput() {
         userMsg(msg);
         sessao.whatsapp = msg;
         botFala(`Obrigado, ${sessao.nome}! Registrei seu contato (${msg}). Um consultor te chamará em breve para tirar suas dúvidas. Redirecionando...`);
-        setTimeout(() => { window.location.href = "https://www.seusite.com.br"; }, 3500);
+        setTimeout(() => { window.location.href = "https://github.com/MKS-TechSolutions/chatBotMKS/"; }, 3500);
     }
     else {
         userMsg(msg);
@@ -301,3 +301,4 @@ function handleInput() {
     }
     input.value = '';
 }
+
