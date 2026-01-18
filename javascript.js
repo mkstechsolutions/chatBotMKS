@@ -196,7 +196,7 @@ function executarAcao(opcao) {
 
     if (txt === "não, tudo certo") {
         botFala("Perfeito! Foi um prazer te ajudar. Visite nosso site sempre que precisar!");
-        setTimeout(() => { window.location.href = "https://mks-techsolutions.github.io/redesSociais/"; }, 3500);
+        setTimeout(() => { window.location.href = "https://mkstechsolutions.github.io/redesSociais/"; }, 3500);
         return;
     }
 
@@ -293,7 +293,7 @@ function handleInput() {
         userMsg(msg);
         sessao.whatsapp = msg;
         botFala(`Obrigado, ${sessao.nome}! Registrei seu contato (${msg}). Um consultor te chamará em breve para tirar suas dúvidas. Redirecionando...`);
-        setTimeout(() => { window.location.href = "https://mks-techsolutions.github.io/redesSociais/"; }, 3500);
+        setTimeout(() => { window.location.href = "https://mkstechsolutions.github.io/redesSociais/"; }, 3500);
     }
     else {
         userMsg(msg);
@@ -301,6 +301,7 @@ function handleInput() {
     }
     input.value = '';
 }
+
 
 
 
